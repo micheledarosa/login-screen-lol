@@ -2,6 +2,7 @@ const inputs = document.querySelectorAll('.input');
 const button = document.querySelector('.login__button');
 const togglePass = document.getElementById('togglePassword');
 const passwordInput = document.querySelector('input[name="password"]');
+const audio = document.getElementById('music');
 
 const handleFocus = ({ target }) => {
     const span = target.previousElementSibling;
@@ -31,6 +32,10 @@ const handleTogglePassword = () => {
     togglePass.src = type === 'password' ? './images/eye-slash.png' : './images/eye.png';
 }
 
+const handleMusic = () => {
+    audio.play();
+}
+
 inputs.forEach((input) => input.addEventListener('focus', handleFocus));
 inputs.forEach((input) => input.addEventListener('focusout', handleFocusOut));
 
@@ -38,3 +43,5 @@ inputs.forEach((input) => input.addEventListener('input', handleChange));
 inputs.forEach((input) => input.addEventListener('focusout', handleFocusOut));
 
 togglePass.addEventListener('click', handleTogglePassword);
+
+window.addEventListener('load', handleMusic);
