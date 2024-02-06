@@ -16,6 +16,9 @@
 <body>
 
     <main>
+        <audio autoplay>
+            <source src="./music/music.mp3" type="audio/mpeg">
+        </audio>
         <section class="login">
 
             <div class="wrapper">
@@ -30,7 +33,10 @@
 
                 <label class="login__label">
                     <span>senha</span>
-                    <input type="password" name="password" class="input">
+                    <input type="password" name="password" class="input input-password">
+                    <button type="button" class="login__label-toggle">
+                        <img id="togglePassword" src="./images/eye-slash.png" alt="">
+                    </button>
                 </label>
 
                 <div class="login__icons">
